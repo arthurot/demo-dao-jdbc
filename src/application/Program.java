@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -17,6 +19,8 @@ public class Program {
 		
 		Seller seller = new Seller(1, "Arthur", "arthur@gmail.com", sdf.parse("17/03/1989"), 12.000, obj);
 		System.out.println(seller);
+		
+		SellerDao sellerDao = DaoFactory.createSellerDao();
 		
 	}
 
